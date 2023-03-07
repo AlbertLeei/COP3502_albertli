@@ -8,13 +8,15 @@ def encode():
 
 
 def main():
-    # Menu
-    print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n')
-    choice = int(input("Please enter an option: "))
-
-    if choice == 1:  # Encryption
-        encode()
-
+    choice = 1
+    while choice != 3:
+        # Menu
+        print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
+        choice = int(input("\nPlease enter an option: "))
+        if choice == 1:  # Encryption
+            x = encode()
+        if choice == 2:
+            # decode(x)
 
 if __name__ == "__main__":
     main()
