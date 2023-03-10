@@ -7,7 +7,7 @@ def encode():
     return enc_pass
 
 
-def main():
+def main(): # hello
     choice = 1
     while choice != 3:
         # Menu
