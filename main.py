@@ -1,3 +1,15 @@
+def decode(encoded):
+    decoded_str = ""
+    for i in encoded:
+        if int(i) < 3:
+            num = int(i) + 7
+            decoded_str += str(num)
+        else:
+            num = int(i) - 3
+            decoded_str += str(num)
+    return decoded_str
+
+
 def encode():
     enc_pass = ""
     un_pass = input('Please enter your password to encode: ')
@@ -16,7 +28,8 @@ def main(): # hello
         if choice == 1:  # Encryption
             x = encode()
         if choice == 2:
-            # decode(x)
+            print(f'The encoded password is {x}, and the decoded password is {decode(x)}')
+
 
 if __name__ == "__main__":
     main()
