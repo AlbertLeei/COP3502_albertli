@@ -14,8 +14,12 @@ def encode():
     enc_pass = ""
     un_pass = input('Please enter your password to encode: ')
     for i in range(len(un_pass)):
-        enc_pass += str(int(un_pass[i]) + 3)
+        if int(un_pass[i]) >= 7:
+            enc_pass += str((int(un_pass[i]) + 3) % 10)
+        else:
+            enc_pass += str((int(un_pass[i]) + 3))
     print('Your password has been encoded and stored!')
+    print(enc_pass)
     return enc_pass
 
 
